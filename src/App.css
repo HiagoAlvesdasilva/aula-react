@@ -24,15 +24,10 @@
     min-width: 120px;
 }
 
-.icone {
+.opcao-img{
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 0 10px;
-    cursor: pointer;
-}
+    align-items: center;
+    padding: 10px;
 
-.icone img {
-    width: 24px; 
-    height: 24px;
 }
