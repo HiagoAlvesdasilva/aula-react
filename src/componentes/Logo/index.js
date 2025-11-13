@@ -1,13 +1,14 @@
 import './estilo.css'
 import logo from '../../imagens/logo.svg'
 
-function Logo(){ 
+
+function Logo(){
     return(
-    <div className='logo'>
-      <img src={logo} alt='logo' />
-      <p><strong>Hiago Store</strong></p>
-    </div>
-    )
+        <div className='logo'>
+        <img src={logo} alt='logo' className='logo-img'></img>
+        <p><strong>Djan</strong>Store</p>
+        </div>
+        )
 }
 
 export default Logo;
