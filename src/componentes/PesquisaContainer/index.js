@@ -3,6 +3,7 @@ import SubTitulo from '../SubTitulo';
 import Titulo from '../Titulo';
 import {livros} from './DadosPesquisa';
 import './estilo.css';
+import Resultado from '../Resultado'
 
 import { useState } from 'react';
 function PesquisaContainer() {
@@ -22,10 +23,10 @@ function PesquisaContainer() {
     }}
     />
     {livrosPesquisados.map(livro => (
-      <div>
+      <Resultado>
         <p>{livro.nome}</p>
         <img src={livro.src} alt='livro'></img>
-      </div>
+      </Resultado>
     ))}
     </section>
 
