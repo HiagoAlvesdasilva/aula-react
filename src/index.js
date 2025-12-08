@@ -10,10 +10,12 @@ root.render(
   <React.StrictMode>
       <BrowserRouter>
       <Routes>
-        <Route/>
+        <Route path="/favoritos" element={<p>Oi!</p>}/>
+        <Route path="/" element={<App/>}/>
+        
       </Routes>
       </BrowserRouter>
-    <App />
+    
   </React.StrictMode>
 );
 
