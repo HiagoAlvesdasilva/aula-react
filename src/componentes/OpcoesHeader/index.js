@@ -1,11 +1,14 @@
 import './estilo.css';
+import Opcao from '../Opcao';
+import { Link} from 'react-router-dom';
 const textoOpcoes = ['CATEGORIAS', 'FAVORITOS','MINHA ESTANTE'];
 function OpcoesHeader(){
     return(
-        <ul className='opcoes'>
+        <ul className='opcao'>
           {textoOpcoes.map ((texto) =>(
-            <li className='opcao'>
-	          <p>{texto}</p></li>
+	          <Link to= "/favoritos">
+              <Opcao><p>{texto}</p></Opcao>
+            </Link>
           ))}
         </ul>
     )
