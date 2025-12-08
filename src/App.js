@@ -1,5 +1,4 @@
 import './App.css';
-import Header from './componentes/Header';
 import PesquisaContainer from './componentes/PesquisaContainer'
 import UltimosLancamentos  from './componentes/UltimosLancamentos';
 import CardRecomenda from './componentes/CardRecomenda';
@@ -9,7 +8,6 @@ import CardRecomenda from './componentes/CardRecomenda';
 function App() {
   return (
     <div className='App'>
-      <Header></Header>
       <PesquisaContainer></PesquisaContainer>
       <UltimosLancamentos></UltimosLancamentos>
       <CardRecomenda 

@@ -1,3 +1,4 @@
+
 import './estilo.css';
 import Opcao from '../Opcao';
 import { Link} from 'react-router-dom';
@@ -6,7 +7,7 @@ function OpcoesHeader(){
     return(
         <ul className='opcao'>
           {textoOpcoes.map ((texto) =>(
-	          <Link to= "/favoritos">
+	          <Link to= {`/${texto.toLowerCase()}`}>
               <Opcao><p>{texto}</p></Opcao>
             </Link>
           ))}
