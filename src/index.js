@@ -8,13 +8,11 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <GlobalStyle>
       <BrowserRouter>
-        <Routes>
-          <Route/>
-        </Routes>
+      <Routes>
+        <Route/>
+      </Routes>
       </BrowserRouter>
-    </GlobalStyle>
     <App />
   </React.StrictMode>
 );
