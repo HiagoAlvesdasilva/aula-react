@@ -1,8 +1,13 @@
 .logo{
     display: flex;
     font-size: 30px;
+    text-decoration: none;
 }
 
 .logo-img{
     margin-right: 10px;
+}
+
+p{
+    text-decoration: none;
 }

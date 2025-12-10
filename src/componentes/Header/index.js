@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 function Header (){
     return(
         <header className='App-header'>
-          <Link to="/">
-            <Logo/>
+          <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+            <Logo />
           </Link>
         <OpcoesHeader></OpcoesHeader>
         <IconesHeader></IconesHeader>
