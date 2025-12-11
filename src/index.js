@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import Home from './Rotas/Home';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './componentes/Header';
-import Favoritos from './componentes/Rotas/favoritos';
-import MinhaEstante from './componentes/Rotas/minhaEstante';
-import Categorias from './componentes/Rotas/categorias';
+import Favoritos from './Rotas/favoritos';
+import MinhaEstante from './Rotas/minhaEstante';
+import Categorias from './Rotas/categorias';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,7 +15,7 @@ root.render(
     <BrowserRouter>
       <Header/>
       <Routes>
-        <Route path="/" element={<App/>}/>
+        <Route path="/" element={<Home/>}/>
         <Route path="/favoritos" element={<Favoritos/>}/>
         <Route path="/minha-estante" element={<MinhaEstante/>}/>
         <Route path="/categorias" element={<Categorias/>}/>

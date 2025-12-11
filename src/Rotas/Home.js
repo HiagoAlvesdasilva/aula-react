@@ -1,9 +1,9 @@
 import './App.css';
-import PesquisaContainer from './componentes/PesquisaContainer';
-import UltimosLancamentos from './componentes/UltimosLancamentos';
-import CardRecomenda from './componentes/CardRecomenda';
+import PesquisaContainer from '../componentes/PesquisaContainer';
+import UltimosLancamentos from '../componentes/UltimosLancamentos';
+import CardRecomenda from '../componentes/CardRecomenda';
 
-function App() {
+function Home() {
   return (
     <div className="App">
       <PesquisaContainer/>
@@ -18,4 +18,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
