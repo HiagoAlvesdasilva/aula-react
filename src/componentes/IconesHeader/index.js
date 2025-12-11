@@ -5,7 +5,7 @@ const icones = [perfil, sacola];
 
 function IconesHeader(){
     return(
-                <ul className='icones'>
+        <ul className='icones'>
           {icones.map ((icone) => (
             <li className='icone'>
             <img src={icone} alt='icones'></img></li>
