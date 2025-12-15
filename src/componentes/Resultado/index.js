@@ -1,7 +1,8 @@
+import './estilo.css'
 
 function Resultado({children}){
     return(
-        <div className='resultado'>
+        <div className='Resultado'>
         {children}
       </div>
     );

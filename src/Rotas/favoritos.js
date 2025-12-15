@@ -1,11 +1,42 @@
 import './App.css';
-import PesquisaContainer from '../componentes/PesquisaContainer';
+import AppContainer from "../componentes/AppContainer";
+import Titulo from "../componentes/Titulo";
+import ResultadoContainer from '../componentes/ResultadoContainer';
+import Resultado from "../componentes/Resultado";
+import {getFavoritos} from '../servicos/favoritos';
+import { useEffect, useState } from 'react';
+import livroImg from "../imagens/livro4.png";
+
 
 function Favoritos() {
+  
+  const [favoritos, setFavoritos] = useState([]);
+
+  useEffect(() => {
+    fetchFavoritos()
+  },[])
+
+  async function fetchFavoritos() {
+    const favoritosDaAPI = await getFavoritos();
+    setFavoritos(favoritosDaAPI);
+  }
   return (
-    <div className="App">
-      <PesquisaContainer/>
-    </div>
+
+    <AppContainer>
+      <div>
+      <Titulo>Aqui está seus livros favoritos</Titulo>
+      <ResultadoContainer>
+        {
+          favoritos.length !==0 ? favoritos.map(favorito =>(
+            <Resultado>
+              <p>{favorito.nome}</p>
+              <img src={livroImg} alt='imagem do livro'/>
+            </Resultado>
+          )) : null
+        }
+      </ResultadoContainer>
+      </div>
+    </AppContainer>
   );
 }
 

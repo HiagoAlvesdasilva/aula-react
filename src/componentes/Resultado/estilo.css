@@ -1,0 +1,24 @@
+.Resultado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    cursor: pointer;
+    text-align: center;
+    padding: 0 100px;
+    transition: border 0.3s ease; /* animação suave */
+  }
+  
+  .Resultado p {
+    width: 200px;
+    color: #FFF;
+  }
+  
+  .Resultado img {
+    width: 100px;
+  }
+  
+  .Resultado:hover {
+    border: 1px solid white;
+  }
+  

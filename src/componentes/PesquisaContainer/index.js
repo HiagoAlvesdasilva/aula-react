@@ -4,6 +4,7 @@ import Titulo from '../Titulo';
 import Resultado from '../Resultado';
 import { useEffect, useState } from 'react';
 import {getLivros} from '../../servicos/livros';
+import {postFavoritos} from '../../servicos/favoritos';
 
 function PesquisaContainer() {
   const [livrosPesquisados, setLivrosPesquisados] = useState([]);
@@ -16,6 +17,11 @@ function PesquisaContainer() {
   async function fetchLivros(){
     const livrosDaAPI = await getLivros()
     setLivros(livrosDaAPI);
+  }
+
+  async function insertFavorito(id){
+    await postFavoritos(id)
+    alert(`Livro de id:${id} inserido!`)
   }
 
   return (
@@ -33,7 +39,7 @@ function PesquisaContainer() {
     }}
     />
     {livrosPesquisados.map(livro => (
-      <Resultado>
+      <Resultado onClick ={()=> insertFavorito(livro.id)} >
         <p>{livro.nome}</p>
         <img src={livro.src} alt='livro'></img>
       </Resultado>
