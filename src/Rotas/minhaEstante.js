@@ -1,7 +1,10 @@
+import './App.css';
+import Titulo from '../componentes/Titulo'
+
 function MinhaEstante (){
     return(
-        <div>
-            <h1>Minha Estante</h1>
+        <div className="App">
+            <Titulo>Minha Estante</Titulo>
         </div>
     );
 }

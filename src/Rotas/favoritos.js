@@ -3,7 +3,7 @@ import PesquisaContainer from '../componentes/PesquisaContainer';
 
 function Favoritos() {
   return (
-    <div className="Home">
+    <div className="App">
       <PesquisaContainer/>
     </div>
   );

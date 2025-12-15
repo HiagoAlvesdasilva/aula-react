@@ -1,7 +1,10 @@
+import './App.css';
+import Titulo from '../componentes/Titulo'
+
 function Categorias (){
     return(
-        <div>
-            <h1>Categorias</h1>
+        <div className="App">
+            <Titulo>Categorias</Titulo>
         </div>
     );
 }
