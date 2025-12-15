@@ -7,7 +7,7 @@ function OpcoesHeader(){
     return(
         <ul className='opcao'>
           {textoOpcoes.map ((texto) =>(
-	          <Link to= {`/${texto.toLowerCase()}`}
+	          <Link to= {`/${texto.toLowerCase().replace(" ", "-")}`}
             style={{ textDecoration: "none", color: "inherit" }}>
               <Opcao><p>{texto}</p></Opcao>
             </Link>
