@@ -3,7 +3,7 @@ import AppContainer from "../componentes/AppContainer";
 import Titulo from "../componentes/Titulo";
 import ResultadoContainer from '../componentes/ResultadoContainer';
 import Resultado from "../componentes/Resultado";
-import {getFavoritos} from '../servicos/favoritos';
+import {getFavoritos, deleteFavorito} from '../servicos/favoritos';
 import { useEffect, useState } from 'react';
 import livroImg from "../imagens/livro4.png";
 
@@ -20,6 +20,12 @@ function Favoritos() {
     const favoritosDaAPI = await getFavoritos();
     setFavoritos(favoritosDaAPI);
   }
+
+  async function deletarFavorito(id){
+    await deleteFavorito(id)
+    fetchFavoritos()
+    alert(`Livro de id:${id} apagado!`)
+  }
   return (
 
     <AppContainer>
@@ -28,7 +34,7 @@ function Favoritos() {
       <ResultadoContainer>
         {
           favoritos.length !==0 ? favoritos.map(favorito =>(
-            <Resultado>
+            <Resultado onClick = {() => deletarFavorito(favorito.id)}>
               <p>{favorito.nome}</p>
               <img src={livroImg} alt='imagem do livro'/>
             </Resultado>
