@@ -6,8 +6,7 @@
     cursor: pointer;
     text-align: center;
     padding: 0 100px;
-    transition: border 0.3s ease; /* animação suave */
-  }
+    transition: border 0.3s ease;
   
   .Resultado p {
     width: 200px;

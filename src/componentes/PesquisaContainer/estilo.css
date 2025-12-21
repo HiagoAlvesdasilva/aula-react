@@ -3,7 +3,7 @@
   color: #FFF;
   text-align: center;
   padding: 60px 0;
-  min-height: 250px; /* altura mínima */
+  min-height: 250px; 
   width: 100%;
 }
 
@@ -25,11 +25,11 @@
 
 .ResultadosContainer {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 3 colunas */
+  grid-template-columns: repeat(2, 1fr);
   gap: 5px;
   margin: 0 auto;
-  max-height: 200px;   /* altura máxima visível */
-  overflow-y: auto;    /* rolagem vertical */
+  max-height: 200px;   
+  overflow-y: auto;
   width: 90%;
   padding: 10px;
   background: rgba(255,255,255,0.1);
